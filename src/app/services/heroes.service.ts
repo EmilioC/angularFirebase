@@ -43,9 +43,29 @@ export class HeroesService {
 
   }
 
-getHeroes(){
+  getHeroes() {
+    return this.http.get(`${ this.url }/heroes.json`)
+            .pipe(
+              map( this.crearArreglo ),
+              delay(0)
+            );
+  }
 
-  return this.http.get( `${ this.url }/heroes.json`);
-}
+  private crearArreglo( heroesObj: any ) {
+
+    const heroes: HeroeModel[] = [];
+
+    Object.keys( heroesObj ).forEach( key => {
+
+      const heroe: HeroeModel = heroesObj[key];
+      heroe.id = key;
+
+      heroes.push( heroe );
+    });
+
+    return heroes;
+
+  }
+
 
 }
