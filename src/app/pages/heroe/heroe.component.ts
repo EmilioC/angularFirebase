@@ -39,8 +39,6 @@ export class HeroeComponent implements OnInit {
     Swal.showLoading();
 
     let peticion: Observable<any>;
-    
-
 
     if ( this.heroe.id){
 

@@ -42,4 +42,10 @@ export class HeroesService {
     return this.http.put( `${ this.url }/heroes/${ heroe.id }.json`, HeroeTemp);
 
   }
+
+getHeroes(){
+
+  return this.http.get( `${ this.url }/heroes.json`);
+}
+
 }
