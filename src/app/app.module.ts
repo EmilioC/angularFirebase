@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TareaComponent } from './pages/tarea/tarea.component';
+import { TareasComponent } from './pages/tareas/tareas.component';
+import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
+import { HeroeComponent } from './pages/heroe/heroe.component';
+import { HeroesComponent } from './pages/heroes/heroes.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TareaComponent,
+    TareasComponent,
+    HeroeComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
