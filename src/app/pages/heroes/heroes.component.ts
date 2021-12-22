@@ -51,7 +51,7 @@ export class HeroesComponent implements OnInit {
 
   }
 
-  borrarHeroe( heroe: HeroeModel, i: number ) {
+  borrarHeroe( heroe: any, i: number ) {
 
     Swal.fire({
       title: "¿Está seguro?",
@@ -63,14 +63,11 @@ export class HeroesComponent implements OnInit {
 
       if ( resp.value ) {
         this.heroes.splice(i, 1);
-        // this.heroesService.borrarHeroe( heroe.id ).subscribe();
+        this.heroesService.borrarHeroe( heroe.id ).subscribe();
       }
 
     });
 
-
-
   }
-
 
 }
