@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HeroesComponent } from './pages/heroes/heroes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ComponentsModule } from './components/components.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
