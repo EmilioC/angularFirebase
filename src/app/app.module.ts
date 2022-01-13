@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HeroesComponent } from './pages/heroes/heroes.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HeroesComponent } from './pages/heroes/heroes.component';
     TareaComponent,
     TareasComponent,
     HeroeComponent,
-    HeroesComponent
+    HeroesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
