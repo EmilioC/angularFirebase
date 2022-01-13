@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HeroesComponent } from './pages/heroes/heroes.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { ComponentsModule } from './components/components.module';
 
 
@@ -20,8 +19,7 @@ import { ComponentsModule } from './components/components.module';
     TareaComponent,
     TareasComponent,
     HeroeComponent,
-    HeroesComponent,
-    NavbarComponent
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
