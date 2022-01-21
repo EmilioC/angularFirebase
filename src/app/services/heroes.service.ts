@@ -49,16 +49,16 @@ export class HeroesService {
   }
 
   getHeroe( id: string ) {
-
+    console.log("Método GetHeroe");
+    console.log(this.http.get(`${ this.url }/heroes/${ id }.json`));
     return this.http.get(`${ this.url }/heroes/${ id }.json`);
-
   }
 
   getHeroes() {
     return this.http.get(`${ this.url }/heroes.json`)
             .pipe(
               map( this.crearArreglo ),
-              delay(500)
+              delay(0)
             );
   }
 

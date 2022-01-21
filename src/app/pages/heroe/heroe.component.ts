@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-heroe',
@@ -18,9 +19,13 @@ export class HeroeComponent implements OnInit {
   private url = 'https://login-app-bc8dc-default-rtdb.europe-west1.firebasedatabase.app/heroes';
 
   constructor( private heroesService: HeroesService,
-               private http: HttpClient) { }
+               private http: HttpClient,
+               private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
   }
 
   guardar( form: NgForm ) {
