@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HeroeComponent implements OnInit {
 
-  heroe : HeroeModel = new HeroeModel();
+  heroe : any = new HeroeModel();
 
   private url = 'https://login-app-bc8dc-default-rtdb.europe-west1.firebasedatabase.app/heroes';
 
@@ -24,8 +24,16 @@ export class HeroeComponent implements OnInit {
 
   ngOnInit() {
 
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id') as string;
     console.log(id);
+   
+    if ( id !== 'nuevo'){
+      this.heroesService.getHeroe(id)
+      .subscribe( resp =>{
+        this.heroe = resp;
+        this.heroe.id = id;
+      })
+    }
   }
 
   guardar( form: NgForm ) {
