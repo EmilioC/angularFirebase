@@ -48,7 +48,7 @@ export class HeroesService {
 
   }
 
-  getHeroe( id: string ) {
+  getHeroe( id: string) {
     console.log("Método GetHeroe");
     console.log(this.http.get(`${ this.url }/heroes/${ id }.json`));
     return this.http.get(`${ this.url }/heroes/${ id }.json`);

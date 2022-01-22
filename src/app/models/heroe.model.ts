@@ -39,6 +39,7 @@ export class HeroeModel {
 
     constructor() {
         this.vivo = true;
+        
     }
 
 }

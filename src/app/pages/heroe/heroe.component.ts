@@ -25,14 +25,19 @@ export class HeroeComponent implements OnInit {
   ngOnInit() {
 
     const id = this.route.snapshot.paramMap.get('id') as string;
+    // const id = this.route.snapshot.paramMap.get('id') as string;
     console.log(id);
    
     if ( id !== 'nuevo'){
+      console.log("Insite if");
       this.heroesService.getHeroe(id)
       .subscribe( resp =>{
         this.heroe = resp;
         this.heroe.id = id;
       })
+    }
+    else{
+      
     }
   }
 
